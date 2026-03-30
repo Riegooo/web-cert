@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+body{
+    height: 100vh;
+}
+
+header{
+    padding: 10px;
+}
+
+header > .header-name{
+    border: 1px solid red;
+}
+
+header > .header-name > h1 {
+    padding: 0px 10px 0px 10px;
+    font-weight: 700;
+    font-size: 1.30rem;
+}
+
+.main-container{
+    border: 1px solid red;
+}
+
+.register-content {
+    padding: 5rem;
+    border: 1px solid blue;
+}
+
+.register-header{
+    padding: 5px;
+}
+
+.header > h1 {
+    font-weight: 800;
+    font-size: 2.50rem;
+}
+
+.card-content {
+    padding: 0px 10px;
+    margin-top: 5px;
+}
+
+.card-content > label {
+    font-weight: 500;
+}
+
+.buttons {
+    padding: 10px;
+}

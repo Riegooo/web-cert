@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title Home
+  body
+    h1 Welcome #{user.username}!
+    p Your user ID: #{user.id}
+    p Your Email: #{user.email}
+    p Your Firstname: #{user.firstname}
+    p Your Lastname: #{user.lastname}
+
+    form(action="/logout" method="POST")
+      button(type="submit") Logout

@@ -1,0 +1,1 @@
+SELECT email, firstname, lastname FROM "practice-db".tryuser WHERE username = $1;

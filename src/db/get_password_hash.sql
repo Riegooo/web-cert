@@ -1,0 +1,1 @@
+SELECT password, user_id FROM "practice-db".tryuser WHERE username = $1;
