@@ -1,13 +1,47 @@
 doctype html
-html
-  head
-    title Home
-  body
-    h1 Welcome #{user.username}!
-    p Your user ID: #{user.id}
-    p Your Email: #{user.email}
-    p Your Firstname: #{user.firstname}
-    p Your Lastname: #{user.lastname}
-
-    form(action="/logout" method="POST")
-      button(type="submit") Logout
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Home
+  link(rel='stylesheet' href='home.css')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(
+      href="/style/home.css" 
+      rel="stylesheet"
+      )
+  link(href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css')
+.main-container
+  .content
+    .sidebar
+      .sidebar-header
+        button.logo-button
+          span &lt;/&gt;WebCert
+        button.sidebar-button
+          i.fa-solid.fa-arrow-left
+      .profile
+        .user-icon
+          .user-username-profile
+            i.fa-solid.fa-circle-user
+            h1 #{user.username}
+          .user-email-profile
+            p #{user.email}
+        .user-buttons
+          form(action="/logout" method="POST")
+            button
+              i.fa-solid.fa-arrow-right-from-bracket
+              span Logout
+      nav
+        button.cert-button
+          i.fa-solid.fa-award
+          span Certification
+        button.leader-button
+          i.fa-solid.fa-users
+          span Leaderboards
+        button.stats-button
+          i.fa-solid.fa-sliders
+          span Stats
+        button.profile-button
+          i.fa-solid.fa-sliders
+          span Profile
