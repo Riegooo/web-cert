@@ -1,10 +1,7 @@
 
 document.getElementById('login_account').onclick = async () => {
-    const username_got = document.getElementById('username');
-    const password_got = document.getElementById('password');
-
-    const username = username_got.value;
-    const password = password_got.value;
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
 
     const response = await fetch('/login', {
         method: "POST",
@@ -27,8 +24,8 @@ document.getElementById('login_account').onclick = async () => {
     if (data.success) {
         window.location = '/home';
     }else{ 
-        username_got.value = "";
-        password_got.value = "";
+        username.value = "";
+        password.value = "";
         alert(msg);
     }
 

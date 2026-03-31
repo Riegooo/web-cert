@@ -1,18 +1,12 @@
 
 document.getElementById('create_account').onclick = async () => {
-    const firstname_got = document.getElementById('firstname');
-    const lastname_got = document.getElementById('lastname');
-    const username_got = document.getElementById('username');
-    const password_got = document.getElementById('password');
-    const email_got = document.getElementById('email');
+    const firstname = document.getElementById('firstname').value.trim();
+    const lastname = document.getElementById('lastname').value.trim();
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const email = document.getElementById('email').value.trim();
 
-    if (!username_got || !password_got) return;
-
-    const firstname = firstname_got.value;
-    const lastname = lastname_got.value
-    const username = username_got.value;
-    const password = password_got.value;
-    const email = email_got.value;
+    if (!username || !password) return;
 
     const response = await fetch('/register', {
         method: "POST",
@@ -36,10 +30,10 @@ document.getElementById('create_account').onclick = async () => {
     if (data.success) {
         window.location = '/login'
     } else {
-        firstname_got.value = "";
-        lastname_got.value = "";
-        username_got.value = "";
-        password_got.value = "";
+        firstname.value = "";
+        lastname.value = "";
+        username.value = "";
+        password.value = "";
         alert(msg);
     }
 
