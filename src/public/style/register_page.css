@@ -5,19 +5,20 @@
 
     font-family: "Poppins", sans-serif;
     font-style: normal;
+
+    box-sizing: border-box;
 }
 
 body{
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header{
     padding: 10px;
 }
 
-header > .header-name{
-    border: 1px solid red;
-}
 
 header > .header-name > h1 {
     padding: 0px 10px 0px 10px;
@@ -26,16 +27,60 @@ header > .header-name > h1 {
 }
 
 .main-container{
-    border: 1px solid red;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
 }
 
 .register-content {
-    padding: 5rem;
-    border: 1px solid blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex: 1;
+    min-height: 100%;
 }
 
 .register-header{
     padding: 5px;
+    text-align: center;
+}
+.register-header > h1 {
+    font-size: 2.20rem;
+    font-weight: 600;
+}
+
+.right-content {
+    padding: 0px 7rem 0px 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.right-content > .right-adjust {
+    width: 100%;
+}
+
+.right-content > .right-adjust > .input_f_l {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.card-content {
+    margin-top: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgb(165, 165, 165);
+}
+
+label {
+    font-weight: 500;
+    color: rgb(124, 124, 124);
 }
 
 .header > h1 {
@@ -43,15 +88,37 @@ header > .header-name > h1 {
     font-size: 2.50rem;
 }
 
-.card-content {
-    padding: 0px 10px;
-    margin-top: 5px;
-}
-
-.card-content > label {
-    font-weight: 500;
-}
-
 .buttons {
+    /* padding: 10px; */
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.buttons > p {
+    font-size: 0.75rem;
+    color: rgba(52, 52, 52, 0.538);
+}
+
+.button_one,
+.button_two {
     padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    margin: 0.7rem 0;
+}
+
+.button_one {
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.button_two {
+    border: 1px solid black;
+    background-color: transparent;
+}
+
+
+.register-content > .left-content {
+    background-color: rgb(248, 248, 248);
 }

@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="header-name">
-            <h1>Web Cert</h1>
+            <h1>&lt;/&gt;Web Cert</h1>
         </div>
         <nav>
             
@@ -21,38 +21,48 @@
     </header>
     <div class="main-container">
         <div class="register-content">
-            <div class="register-header">
-                <h1>REGISTER</h1>
+
+            <div class="left-content">
+
             </div>
 
-            <div class="input_f_l">
-                <div class="input_fname">
-                    <label for="">First Name</label><br>
-                    <input type="text" placeholder="John" name="firstname" id="firstname"><br>
+            <div class="right-content">
+                <div class="right-adjust">
+                    <div class="register-header">
+                        <h1>Create your account</h1>
+                    </div>
+
+                    <div class="input_f_l">
+                        <div class="input_fname">
+                            <label for="">First Name</label><br>
+                            <input type="text" placeholder="John" name="firstname" id="firstname"><br>
+                        </div>
+                        <div class="input_lname">
+                            <label for="">Last Name</label><br>
+                            <input type="text" placeholder="doe" name="lastname" id="lastname"><br>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <label for="">Username</label><br>
+                        <input type="text" placeholder="John doe" name="username" id="username"><br>
+                    </div>
+
+                    <div class="card-content">
+                        <label for="">Email</label><br>
+                        <input type="email" placeholder="johndoe@gmail.com" name="email" id="email"><br>
+                    </div>
+
+                    <div class="card-content">
+                        <label for="">Password</label><br>
+                        <input type="password" placeholder="Create your password" name="password" id="password">
+                    </div>
+
+                    <div class="buttons">
+                        <button id="create_account" class="button_one">Create Account</button>
+                        <p>Already Have an Account?</p>
+                        <button onclick="loginPath()" class="button_two">Sign in instead</button>
+                    </div>
                 </div>
-                <div class="input_lname">
-                    <label for="">Last Name</label><br>
-                    <input type="text" placeholder="doe" name="lastname" id="lastname"><br>
-                </div>
-            </div>
-            <div class="card-content">
-                <label for="">Username</label><br>
-                <input type="text" placeholder="John doe" name="username" id="username"><br>
-            </div>
-
-            <div class="card-content">
-                <label for="">Email</label><br>
-                <input type="email" placeholder="johndoe@gmail.com" name="email" id="email"><br>
-            </div>
-
-            <div class="card-content">
-                <label for="">Password</label><br>
-                <input type="password" placeholder="Create your password" name="password" id="password">
-            </div>
-
-            <div class="buttons">
-                <button id="create_account">Create Account</button>
-                <p>Already Have an Account? <button onclick="loginPath()">Login Here</button></p>
             </div>
         </div>
     </div>
