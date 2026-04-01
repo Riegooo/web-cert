@@ -1,15 +1,60 @@
+//- doctype html
+//- head
+//-   meta(charset='UTF-8')
+//-   meta(name='viewport' content='width=device-width, initial-scale=1.0')
+//-   title Home
+//-   link(rel='preconnect' href='https://fonts.googleapis.com')
+//-   link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+//-   link(
+//-       href="/style/home.css" 
+//-       rel="stylesheet"
+//-       )
+//-   link(href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap' rel='stylesheet')
+//-   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css')
+//- .main-container
+//-   .content
+//-     .sidebar
+//-       .sidebar-header
+//-         button.logo-button
+//-           span &lt;/&gt;WebCert
+//-         button.sidebar-button
+//-           i.fa-solid.fa-arrow-left
+//-       .profile
+//-         .user-icon
+//-           .user-username-profile
+//-             i.fa-solid.fa-circle-user
+//-             h1 #{user.username}
+//-           .user-email-profile
+//-             p #{user.email}
+//-         .user-buttons
+//-           form(action="/logout" method="POST")
+//-             button
+//-               i.fa-solid.fa-arrow-right-from-bracket
+//-               span Logout
+//-       nav
+//-         button.cert-button
+//-           i.fa-solid.fa-award
+//-           span Certification
+//-         button.leader-button
+//-           i.fa-solid.fa-users
+//-           span Leaderboards
+//-         button.stats-button
+//-           i.fa-solid.fa-sliders
+//-           span Stats
+//-         button.profile-button
+//-           i.fa-solid.fa-sliders
+//-           span Profile
 doctype html
 head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Home
-  link(rel='stylesheet' href='home.css')
-  link(rel='preconnect' href='https://fonts.googleapis.com')
-  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
   link(
       href="/style/home.css" 
       rel="stylesheet"
       )
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
   link(href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap' rel='stylesheet')
   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css')
 .main-container
@@ -28,7 +73,7 @@ head
           .user-email-profile
             p #{user.email}
         .user-buttons
-          form(action="/logout" method="POST")
+          form(action='/logout' method='POST')
             button
               i.fa-solid.fa-arrow-right-from-bracket
               span Logout
@@ -38,10 +83,68 @@ head
           span Certification
         button.leader-button
           i.fa-solid.fa-users
-          span Leaderboards
+          span Leaderboard
         button.stats-button
           i.fa-solid.fa-sliders
           span Stats
         button.profile-button
           i.fa-solid.fa-sliders
           span Profile
+    .home-main-container
+      .home-content
+        .home-header-and-stats
+          .home-welcome-header
+            i.fa-solid.fa-circle-user
+            .home-header-message
+              h1 Welcome Back, #{user.username}
+              p Continue your learning journey
+          .header-stats
+            .stats-text-overview
+              h2 Progress Overview
+              .stats-text-streak
+                .streak
+                  i.fa-solid.fa-fire
+                  p 3
+                p Streak
+              .stats-text-goal
+                .goal
+                  i.fa-solid.fa-clock
+                  p 1
+                  span /
+                  p day
+                p goal
+            .stats-prog-languages
+              .html-stats
+                i.fa-brands.fa-html5
+                .html-display-flex
+                  .html-progress-bar
+                    // displayflex
+                    h3 HTML
+                    p Progress
+                  .html-percent-bar
+                    | asdfdasfdas
+                    // progress percent html
+              .css-stats
+                i.fa-brands.fa-css3-alt
+                .css-display-flex
+                  .css-progress-bar
+                    // displayflex
+                    h3 CSS
+                    p Progress
+                  .css-percent-bar
+                    | asdfdasfdas
+                    // progress percent CSS
+              .js-stats
+                i.fa-brands.fa-js
+                .js-display-flex
+                  .js-progress-bar
+                    // displayflex
+                    h3 JavaScript
+                    p Progress
+                  .js-percent-bar
+                    | asdfdasfdas
+                    // progress percent JS
+        .home-display-content
+      // One display grid
+      // Leaderboard
+      // my certifcations
