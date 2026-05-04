@@ -18,4 +18,4 @@ This repository reflects my progress, experiments, and practice while learning.
 
 > Built for learning. Improved over time.
 
-## In Progress
+## Status: In Progress
