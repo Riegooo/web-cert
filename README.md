@@ -10,10 +10,12 @@ It is part of my personal journey in improving my skills in **web development** 
 - It is continuously being updated as I learn new concepts
 - Code, structure, and design may change over time
 
-## 🚀 Learning Journey
+## Learning Journey
 
 This repository reflects my progress, experiments, and practice while learning.
 
 ---
 
 > Built for learning. Improved over time.
+
+## In Progress
